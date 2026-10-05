@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma</title>
+</head>
+<body>
+    <h2>Operación: Suma</h2>
+    
+    <form method="POST">
+        <input type="number" step="any" name="numero1" placeholder="Número 1" required> +
+        <input type="number" step="any" name="numero2" placeholder="Número 2" required>
+        <button type="submit">Calcular</button>
+    </form>
+    
+    {% if resultado is not none %}
+        <h3>Resultado: {{ resultado }}</h3>
+    {% endif %}
+
+    <br>
+    <nav>
+        <a href="{{ url_for('suma') }}">Suma</a> | 
+        <a href="{{ url_for('resta') }}">Resta</a> | 
+        <a href="{{ url_for('multiplicacion') }}">Multiplicación</a> | 
+        <a href="{{ url_for('division') }}">División</a>
+    </nav>
+</body>
+</html>
